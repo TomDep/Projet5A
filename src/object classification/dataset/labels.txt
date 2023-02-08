@@ -1,0 +1,4 @@
+apple
+orange
+unknown
+pattern

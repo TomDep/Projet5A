@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Projet 5A" company="Reconnaissance de motif et localisation 2D en temps réel" webLink="" view-date="2022-10-10" view-index="0" gantt-divider-location="322" resource-divider-location="300" version="3.2.3246" locale="en_US">
+    <description/>
+    <view zooming-state="default:3" id="gantt-chart">
+        <field id="tpd3" name="Name" width="183" order="0"/>
+        <field id="tpd4" name="Begin date" width="69" order="1"/>
+        <field id="tpd5" name="End date" width="69" order="2"/>
+        <option id="taskLabelUp" value="name"/>
+        <option id="taskLabelDown" value="length"/>
+        <option id="filter.completedTasks" value="false"/>
+        <timeline>
+            <![CDATA[2]]>
+        </timeline>
+        <option id="color.recent">
+            <![CDATA[#999999 #ff00cc #ff3300]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="true"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="11" name="Phase 1" color="#999999" meeting="false" start="2022-10-11" duration="59" complete="0" thirdDate="2022-10-11" thirdDate-constraint="0" expand="true">
+            <task id="2" name="Rédaction du cahier des charges" color="#8cb6ce" meeting="false" start="2022-10-11" duration="13" complete="0" thirdDate="2022-05-29" thirdDate-constraint="0" expand="true"/>
+            <task id="3" name="Prise en main du microcontrolleur" color="#8cb6ce" shape="0,1,0,1,0,0,1,0,0,1,0,1,1,0,0,0" meeting="false" start="2022-10-24" duration="14" complete="0" thirdDate="2022-09-25" thirdDate-constraint="0" expand="false"/>
+            <task id="4" name="Éétude bibliographique sur les états d'art dans le domaine" color="#8cb6ce" meeting="false" start="2022-10-24" duration="10" complete="0" thirdDate="2022-11-07" thirdDate-constraint="0" expand="true">
+                <depend id="5" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="5" name="Choix du motif" meeting="false" start="2022-11-03" duration="4" complete="0" expand="true">
+                <depend id="6" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="6" name="Choisir l'algorithme ainsi que les outils pour la partie IA" color="#8cb6ce" meeting="false" start="2022-11-07" duration="7" complete="0" thirdDate="2022-11-07" thirdDate-constraint="0" expand="true">
+                <depend id="7" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="7" name="Implémentation en temps réel" color="#8cb6ce" shape="0,1,0,1,0,0,1,0,0,1,0,1,1,0,0,0" meeting="false" start="2022-11-14" duration="14" complete="0" thirdDate="2022-11-14" thirdDate-constraint="0" expand="true"/>
+            <task id="8" name="Tester le système" meeting="false" start="2022-11-21" duration="14" complete="0" expand="true">
+                <depend id="10" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="9" name="Résolution des bugs" color="#8cb6ce" shape="0,1,0,1,0,0,1,0,0,1,0,1,1,0,0,0" meeting="false" start="2022-11-28" duration="7" complete="0" thirdDate="2022-11-28" thirdDate-constraint="0" expand="true">
+                <depend id="10" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="10" name="Préparation de la soutenance intermédiaire" meeting="false" start="2022-12-05" duration="4" complete="0" expand="true">
+                <depend id="0" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="0" name="Soutenance Intermédiaire" color="#ff3300" meeting="true" start="2022-12-09" duration="0" complete="0" thirdDate="2022-10-17" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="12" name="Phase 2" color="#999999" meeting="false" start="2022-12-09" duration="63" complete="0" thirdDate="2022-12-09" thirdDate-constraint="0" expand="true">
+            <task id="13" name="Bilan de l'avancement du projet" meeting="false" start="2022-12-09" duration="3" complete="0" expand="true">
+                <depend id="14" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="14" name="Amélioration du programme" color="#8cb6ce" shape="0,1,0,1,0,0,1,0,0,1,0,1,1,0,0,0" meeting="false" start="2022-12-12" duration="28" complete="0" thirdDate="2022-12-12" thirdDate-constraint="0" expand="true">
+                <depend id="17" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="17" name="Optimisations" color="#8cb6ce" shape="0,1,0,1,0,0,1,0,0,1,0,1,1,0,0,0" meeting="false" start="2023-01-09" duration="14" complete="0" thirdDate="2023-01-09" thirdDate-constraint="0" expand="true">
+                <depend id="15" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="15" name="Rédaction du rapport final" color="#8cb6ce" meeting="false" start="2023-01-23" duration="14" complete="0" thirdDate="2023-01-10" thirdDate-constraint="0" expand="true">
+                <depend id="16" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="16" name="Préparation de la soutenance finale" meeting="false" start="2023-02-06" duration="4" complete="0" expand="true"/>
+            <task id="1" name="Soutenance Finale" color="#ff3300" meeting="true" start="2023-02-10" duration="0" complete="0" thirdDate="2022-10-17" thirdDate-constraint="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
