@@ -1,19 +1,23 @@
-# Edge Impulse - OpenMV Object Detection Example
+# TensorFlow Lite Object Detection Example
+#
+# This examples uses the builtin FOMO model to detect faces.
 
-import sensor, image, time, os, tf, math, uos, gc
+import sensor, image, time, tf, math
 
 sensor.reset()                         # Reset and initialize the sensor.
-sensor.set_pixformat(sensor.GRAYSCALE)    # Set pixel format to RGB565 (or GRAYSCALE)
-sensor.set_framesize(sensor.QQVGA)      # Set frame size to QVGA (320x240)
+sensor.set_pixformat(sensor.RGB565)    # Set pixel format to RGB565 (or GRAYSCALE)
+sensor.set_framesize(sensor.QVGA)      # Set frame size to QVGA (320x240)
 sensor.set_windowing((240, 240))       # Set 240x240 window.
 sensor.skip_frames(time=2000)          # Let the camera adjust.
 
-net = None
-labels = None
-min_confidence = 0.5
+min_confidence = 0.4
 
 # Load built-in FOMO face detection model
 labels, net = tf.load_builtin_model("pattern_detection")
+
+# Alternatively, models can be loaded from the filesystem storage.
+#net = tf.load('<object_detection_network>', load_to_fb=True)
+#labels = [line.rstrip('\n') for line in open("labels.txt")]
 
 colors = [ # Add more colors if you are detecting more than 7 types of classes at once.
     (255,   0,   0),
@@ -44,7 +48,7 @@ while(True):
             [x, y, w, h] = d.rect()
             center_x = math.floor(x + (w / 2))
             center_y = math.floor(y + (h / 2))
-            print('x %d\ty %d' % (center_x, center_y))
+            print(f"x {center_x}\ty {center_y}")
             img.draw_circle((center_x, center_y, 12), color=colors[i], thickness=2)
 
-    print(clock.fps(), "fps", end="\n\n")
+    print(clock.fps(), "fps", end="\n")
